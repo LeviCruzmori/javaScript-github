@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercicio 2 com leitura pelo teclado</title>
+    <script>
+        let frase=window.prompt('digite uma frase: ')
+        document.write(frase+"<br>")
+        tamanho = frase.length
+        for ( var i=0; i< tamanho;){
+            document.write('<br> Caractere na posição'+i+":"+frase.charAt(i))
+        }
+        document.write('<br><br>Primeiro caractere: '+frase.charAt(frase.length-1))
+        document.write('Último caractere: '+frase.charAt(frase.length-1))
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

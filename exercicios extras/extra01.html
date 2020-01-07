@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<title>Formulario Padrão HTML sem JavaScript</title>
+    Acrecentando JS -->
+    <script>
+        // primeiro teste.
+       // nome1=window.prompt('Qual seu Nome?')
+        //document.write('Ola, '+nome1+ '!')
+
+        //segundo teste
+        nome1=window.prompt('Qual seu Nome?')
+        if (nome1 !=null && nome1 != '!') {
+            document.write('OLA,'+nome1+ '!')
+        }
+        else{
+            document.write('Ola,visitante!')
+        }
+
+
+    </script>
+</head>
+<body>
+    <!-- Incerir função para validar a leitura dos campos do Form-->
+    <script>
+        function validar(){
+            if (document.cadastro.nome.value == "") {
+                window.alert('Você deve preencher o campo Nome.')
+            document.cadastro.nome.focus()
+            return false
+            }
+            if (document.cadastro.observacoes.value == "") {
+                window.alert('Você deve colocar alguma observação....')
+                document.cadastro.observacoes.focus()
+                return false
+                
+            }
+            
+        }
+
+    </script>
+    <!-- Inicio do formulario-->
+    <form action="mailto: teste@gmail.com"method="post" enctype="text/plain" name="cadastro">
+        <p>
+            Por favor, preencha os campos abaixo e depois clique no botão Enviar. Caso necessite apagar os dados,
+            dê um clique no botão Limpar. <br> Muito Obrigado!
+            <br><br><br>
+        </p>
+        <!-- Dados Iniciais-->
+        Nome Completo: <input type="text" name="nome" size="35">
+       
+        Seu e-mail: <input type="text" name="email" size="35"> <br>
+       <!-- opção de genero-->
+        sexo: <br>
+            <input type="radio" name="sexo" value="f"> Feminino <br>
+            <input type="radio" name="sexo" value="m"> Masculino <br><br>
+       <!--estado civil-->
+        Estado Civel:<br>
+        <input type="radio" name="civil" value="s'"> Solteiro <br>
+        <input type="radio" name="civil" value="c"> Casado <br>
+        <input type="radio" name="civil" value="e"> Enrolado <br><br>
+<!--opção de bens-->
+        Bens que possui:<br>
+        <input type="checkbox" name="bens" value="f"> Casa <br>
+        <input type="checkbox" name="bens" value="f"> Altomovel <br>
+        <input type="checkbox" name="bens" value="f"> Moto <br><br>
+<!--Lista de faixa de idade-->
+        Faixa de idade: <select name="faixaidade">
+            <option value="3a10"> 3 a 10 anos
+            <option value="11a25"> 11 a 25 anos
+            <option value="26a35"> 26 a 35 anos
+            <option value="36a55"> 36 a 55 anos
+            <option value="56a90"> 56 a 90 anos
+        </select>
+<!-- Lista de opçoes do hobby-->
+        Hobby preferido: <select name="hobby">
+            <option value="livros">Ler livros</option>
+            <option value="musica">Ouvir musica</option>
+            <option value="cinema">Assister filmes</option>
+            <option value="esporte">Praticar esportes</option>
+            <option value="games">Jogar games</option>
+        </select>
+<!--area de comentario-->
+        Observaçoes Gerais: <br>
+        <textarea name="observacoes" rows="5" cols="60"></textarea><br>
+<!--botoes de enviar e apagar-->
+        <input type="SUBMIT" value="Enviar os Dados" onclick="validar()" >
+        <input type="RESET" value="Limpar os Dados">
+
+    </form>       
+
+</body>
+</html>

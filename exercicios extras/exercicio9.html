@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apresenta o quadrado de um número já informado intrnamente e, em seguida , em uma caixa de texto, permite que você informe um número para saber o seu valor ao cubo.</title>
+<script>
+function quadrado(x) {
+    document.write(x*x);
+    }
+    function cubo(x) {
+        return x*x*x
+    }
+    y=5;
+    document.write("Exemplo: O valor de "+y+" é igual a ");
+    quadrado(y)
+
+</script>
+
+</head>
+<body>
+    <form>
+<br> Informe um número para saber seu valor ao cubo e em seguida, pressione a tecla TAB, ou de um clique fora da caixa de texto.<br>
+<input type="text" name="aocubo" value="" onblur="alert('O cubo de '+this.value+'é'+cubo(this.value))">
+
+    </form>
+</body>
+</html>
